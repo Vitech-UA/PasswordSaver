@@ -40,6 +40,7 @@ class PasswordSaverGui:
             else:
                 self.database_list.append(line)
                 self.ui.textedit_pass.append(line.strip())
+        self.database_list.append("end_of_file")
         self.database_list = self.database_list[:-1]
         database.close()
         if os.path.exists(self.database_dec_file_name):
@@ -52,7 +53,6 @@ class PasswordSaverGui:
         open_f = open(self.database_dec_file_name, "w")
         for item in self.database_list:
             open_f.writelines(item)
-        open_f.writelines("end_of_file")
         open_f.close()
 
     def add_item_in_list(self):
