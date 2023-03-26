@@ -35,11 +35,12 @@ class PasswordSaverGui:
         crypto.decrypt_file(self.database_enc_file_name, self.database_dec_file_name)
         database = open(self.database_dec_file_name, "r")
         for line in database.readlines():
-            if "end_data" in line:
+            if "end_of_file" in line:
                 break
             else:
                 self.database_list.append(line)
                 self.ui.textedit_pass.append(line.strip())
+        self.database_list = self.database_list[:-1]
         database.close()
         if os.path.exists(self.database_dec_file_name):
             os.remove(self.database_dec_file_name)
