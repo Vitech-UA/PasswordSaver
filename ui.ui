@@ -6,14 +6,98 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>302</width>
-    <height>432</height>
+    <width>670</width>
+    <height>399</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>20</y>
+      <width>221</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Додати в базу</string>
+    </property>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>196</width>
+       <height>146</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <item>
+       <widget class="QSplitter" name="splitter">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Ресурс:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_recource"/>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSplitter" name="splitter_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Логін:  </string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_login"/>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSplitter" name="splitter_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Пароль:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_password"/>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSplitter" name="splitter_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Примітка:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_info"/>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_add_item">
+        <property name="text">
+         <string>Зберегти</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
@@ -30,13 +114,6 @@
         <widget class="QPushButton" name="button_load_db">
          <property name="text">
           <string>Завантажити базу</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="button_save_db">
-         <property name="text">
-          <string>Зберегти базу</string>
          </property>
         </widget>
        </item>
@@ -70,7 +147,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit"/>
+            <widget class="QLineEdit" name="lineEdit_search"/>
            </item>
           </layout>
          </item>
@@ -89,7 +166,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>302</width>
+     <width>670</width>
      <height>26</height>
     </rect>
    </property>
